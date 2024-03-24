@@ -1,8 +1,7 @@
-import subprocess
+import socket
 import threading
-# import markdown2
+import markdown2
 import os
-import time
 
 
 def add_html_structure(markdown_data):
@@ -80,19 +79,23 @@ def main_markdown_reader():
     father(path)
 
 
-def start_web_server():
-    try:
-        subprocess.Popen(['python',
-                          '-m', 'http.server',
-                          '--bind', '127.0.0.1'],
-                         stdout=subprocess.DEVNULL,
-                         stderr=subprocess.DEVNULL)  # end of the subprocess
-
-        time.sleep(1)
-        print("Server running in https://127.0.0.1:8000")
-
-    except:
-        print("error")
+def created_web_server():
+    
 
 
-start_web_server()
+
+# def main_thread():
+    # web_server_thread = threading.Thread(target=start_web_server)
+
+    # web_server_thread.start()
+    # print("server has started running on: http://127.0.0.1:8000")
+
+    # try:
+        # while True:
+            # pass
+    # except KeyboardInterrupt:
+        # print("Joining threads")
+        # web_server_thread.join()
+
+
+# main_thread()
