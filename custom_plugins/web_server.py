@@ -25,7 +25,7 @@ class web_server:
             request_lines = request.split()
             method = request_lines[0]
             file_requested = request_lines[1]
-            path = os.path.expanduser("~/.config/nvim/custom_plugins/")
+            path = os.path.expanduser("~/.config/nvim/custom_plugins")
             file_path = path + file_requested
 
             with open('README.html', 'r') as file:
@@ -40,6 +40,13 @@ class web_server:
             elif os.path.exists(file_path):
                 status = "200 OK"
                 file_content = open(file_path, 'rb').read()
+
+                response = f"HTTP/1.1 {status}\n\n{file_content.decode()}"
+                client_connection.send(response.encode())
+
+                print(f"[{method}] {file_path}: status {status}")
+                client_connection.close()
+
             else:
                 status = "404 Not Found"
                 file_content = b"File not found"
@@ -47,5 +54,11 @@ class web_server:
                 response = f"HTTP/1.1 {status}\n\n{file_content.decode()}"
                 client_connection.send(response.encode())
 
-                print(f"[{method}] {path}: status {status}")
+                print(f"[{method}] {file_path}: status {status}")
                 client_connection.close()
+
+    def hot_reload_handler():
+        print("NOT READY YET")
+
+
+web_server.start_web_server()
