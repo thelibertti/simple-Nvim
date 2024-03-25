@@ -1,5 +1,4 @@
 import socket
-import threading
 import markdown2
 import os
 
@@ -77,25 +76,3 @@ def main_markdown_reader():
     path = os.path.expanduser('~/.config/nvim/custom_plugins/README.md')
 
     father(path)
-
-
-def created_web_server():
-    
-
-
-
-# def main_thread():
-    # web_server_thread = threading.Thread(target=start_web_server)
-
-    # web_server_thread.start()
-    # print("server has started running on: http://127.0.0.1:8000")
-
-    # try:
-        # while True:
-            # pass
-    # except KeyboardInterrupt:
-        # print("Joining threads")
-        # web_server_thread.join()
-
-
-# main_thread()
