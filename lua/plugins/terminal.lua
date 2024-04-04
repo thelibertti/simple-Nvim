@@ -11,6 +11,9 @@ vim.keymap.set('n', "<Leader>t", ":Terminal<CR>")
 
 
 return {
-  {'akinsho/toggleterm.nvim', version = "*", config = true},
-  event="VeryLazy",
+  {'akinsho/toggleterm.nvim',
+    version = "*",
+    config = true,
+    event = "VeryLazy"
+  }
 }
