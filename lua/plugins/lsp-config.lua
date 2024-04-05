@@ -17,12 +17,18 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
-      require("mason-lspconfig").setup()
-      require("mason-lspconfig").setup_handlers({
-        function(server_name)
-          require("lspconfig")[server_name].setup{}
-        end,
-      })
+      local capabilities = require('cmp_nvim_lsp').default_capabilities()
+      local lspconfig = require("lspconfig")
+      --start adding your own setups here
+      --remeber all of them follow the next format 
+      --lspconfig.<name_of_the_sever>.setup({
+      -- capabilities = capabilities
+      --})
+
+      --end of setups
+
+
+      
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
