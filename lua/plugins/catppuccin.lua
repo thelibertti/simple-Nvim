@@ -1,6 +1,3 @@
---theme of the configuration 
---see more themes on the githun of catppuccin
-
 return {
   {
     "catppuccin/nvim",
