@@ -15,6 +15,7 @@ require("vim-options")
 require("lazy").setup({
   spec = {
     { import = "plugins" },
+    --{ import = "usr_plugins"} --uncomment to use custom plugins
   },
   defaults = {
     lazy = false, --comment
