@@ -43,7 +43,7 @@ Español?
 
 **ALL PLUGINS AND THEIR CONFIGURETIONS ARE IN** 
 ```bash
-cd ~/.config/nvim/lua/plugins
+~/.config/nvim/lua/plugins
 ```
 <h1>HOW TO INSTALL?</h1>
 
