@@ -8,7 +8,7 @@ Español?
 
 <h1>What is this project?</h1>
 
-![](templates/Simple_S3.png)
+![](templates/simple-nvim-templates.jpg)
 
 
 
@@ -38,7 +38,7 @@ Español?
 
 
 
-![](templates/simple_S.png)
+![](templates/Nvim-templaye-V.mp4)
 
 
 **ALL PLUGINS AND THEIR CONFIGURETIONS ARE IN** 
