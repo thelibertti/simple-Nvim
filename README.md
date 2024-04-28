@@ -8,7 +8,7 @@ Español?
 
 <h1>What is this project?</h1>
 
-![](templates/simple-nvim-templates.jpg)
+![](templates/simple-nvim-template.jpg)
 
 
 
