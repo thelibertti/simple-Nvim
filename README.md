@@ -49,12 +49,6 @@ https://github.com/klkgang/simple-Nvim/assets/139710771/3b3b6c13-a98c-4709-bf41-
 ```
 <h1>HOW TO INSTALL?</h1>
 
-## Dependencies 
-
-**before continuing with the instaltion**
-
-
-
 
 ### Step One
 First, ensure that Neovim is installed on your system, and you have a .config directory for the configuration. If you don't see the .config directory in your home directory, create it by running:
