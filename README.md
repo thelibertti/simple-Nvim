@@ -47,6 +47,13 @@ Español?
 ```
 <h1>HOW TO INSTALL?</h1>
 
+## Dependencies 
+
+**before continuing with the instaltion**
+
+
+
+
 ### Step One
 First, ensure that Neovim is installed on your system, and you have a .config directory for the configuration. If you don't see the .config directory in your home directory, create it by running:
 

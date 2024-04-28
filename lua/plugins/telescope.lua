@@ -1,3 +1,9 @@
+-- Telescope is having problems with live live_grep
+-- TODO: fix the live grep bug
+
+
+
+
 return {
   {
     "nvim-telescope/telescope-ui-select.nvim",

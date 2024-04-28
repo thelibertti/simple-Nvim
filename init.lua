@@ -20,5 +20,8 @@ require("lazy").setup({
   defaults = {
     lazy = false, --comment
   },
+  change_detection = {
+		notify = false,
+	},
 
 })
