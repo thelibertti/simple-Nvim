@@ -1,7 +1,3 @@
---WARNING: this config has problems loding some lsp servers
---WARNING: plus it cannot load multiple lsp servers at the same time 
---WARNING: for example one lsp server for python and other to check spelling
---TODO: FIX THOSE TWO PROBLEMS
 return {
   {
     "williamboman/mason.nvim",

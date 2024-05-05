@@ -36,7 +36,7 @@ Español?
 
 - Auto-pairs: to auto complete characters such as '(' '{' (more info at [Auto-pairs](https://github.com/windwp/nvim-autopairs))
 
-
+- Coke-line: To manage the open buffers (more info at [CokeLine](https://github.com/willothy/nvim-cokeline))
 
 
 https://github.com/klkgang/simple-Nvim/assets/139710771/3b3b6c13-a98c-4709-bf41-3045e683ca13
