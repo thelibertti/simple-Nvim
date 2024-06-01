@@ -25,7 +25,7 @@ return {
           require("lspconfig")[server_name].setup{
             capabilities = capabilities
           }
-        end
+        end,
         --NOTE: if you need you can add other handlers than the 
         --NOTE: default ones run 
         --NOTE: :h mason-lspconfig-automatic-server-setup
@@ -39,4 +39,3 @@ return {
     end,
   },
 }
---ready for alpha 0.3
