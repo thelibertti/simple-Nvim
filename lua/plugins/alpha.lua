@@ -47,4 +47,3 @@ return {
     alpha.setup(dashboard.opts)
   end,
 }
---ready for alpha 0.3

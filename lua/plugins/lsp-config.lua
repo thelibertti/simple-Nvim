@@ -1,7 +1,3 @@
---WARNING: this config has problems loding some lsp servers
---WARNING: plus it cannot load multiple lsp servers at the same time 
---WARNING: for example one lsp server for python and other to check spelling
---TODO: FIX THOSE TWO PROBLEMS
 return {
   {
     "williamboman/mason.nvim",
@@ -29,7 +25,7 @@ return {
           require("lspconfig")[server_name].setup{
             capabilities = capabilities
           }
-        end
+        end,
         --NOTE: if you need you can add other handlers than the 
         --NOTE: default ones run 
         --NOTE: :h mason-lspconfig-automatic-server-setup
@@ -43,4 +39,3 @@ return {
     end,
   },
 }
---ready for alpha 0.3
