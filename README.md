@@ -51,17 +51,9 @@ https://github.com/klkgang/simple-Nvim/assets/139710771/3b3b6c13-a98c-4709-bf41-
 
 
 ### Step One
-First, ensure that Neovim is installed on your system, and you have a .config directory for the configuration. If you don't see the .config directory in your home directory, create it by running:
-
-```bash
-mkdir -p ~/.config/nvim
-```
-
-### Step two 
-
 Set everything up with this command
 ```bash
-cd ~/.config/nvim/ && git clone https://github.com/klkgang/simple-Nvim/ && cd simple-Nvim && mv * .. && cd .. && rm -rf simple-Nvim
+curl -sSL https://raw.githubusercontent.com/thelibertti/simple-Nvim/main/father.sh | bash
 ```
 
 That's it! Now simply run nvim and start exploring the configuration.
