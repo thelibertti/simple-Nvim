@@ -7,5 +7,3 @@ return {
     require("ibl").setup()
   end
 }
-
---ready for alpha 0.3

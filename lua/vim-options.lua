@@ -12,7 +12,7 @@ vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
 
 vim.wo.number = true
 
---icons for errors and other stuff
+--general icons for the configuration
 vim.fn.sign_define("DiagnosticSignError",
     {text = " ", texthl = "DiagnosticSignError"})
 vim.fn.sign_define("DiagnosticSignWarn",
