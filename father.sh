@@ -1,3 +1,8 @@
+#!/bin/bash
+#
+# Father of simple-neovim
+#
+# version 0.1
 REPOSITORY_URL="https://github.com/thelibertti/simple-Nvim"
 repository_name="simple-Nvim"
 path="$HOME/.config/nvim"
@@ -12,7 +17,19 @@ print_message() {
     echo -e "${color}${message}${reset}"
 }
 
-function check_dependencies() {
+update_simple_nvim() {
+    print_message "$green" "Updating simple-nvim"
+    cd $HOME/.config/nvim || { print_message "$red" "Failed to navigate to $HOME/.config/nvim"; exit 1; }
+    result=$(git pull)
+    no_update_available="Already up to date."
+    if [[ "$result" == *"$no_update_available"* ]]; then
+        print_message "$red" "No update available"
+    else
+        print_message "$green" "Updated Neovim successfully"
+    fi
+}
+
+check_dependencies() {
     missing_dependencies=0
     if ! command -v git &> /dev/null; then
         print_message "$red" "git could not be found"
@@ -31,8 +48,8 @@ function check_dependencies() {
     fi
 }
 
-function install_simple_nvim() {
-    if [ -d "$path" ]; then 
+install_simple_nvim() {
+    if [ -d "$path" ]; then
         print_message "$green" "[INFO] Backing up your current nvim configuration..."
         rm -rf "$path.bak"
         if ! mv "$path" "$path.bak"; then
@@ -58,8 +75,16 @@ function install_simple_nvim() {
     print_message "$green" "Simple-Nvim has been successfully installed."
 }
 
-print_message "$green" "Welcome to the remote installer of Simple-Nvim"
-print_message "$yellow" "Checking for dependencies..."
-check_dependencies
-print_message "$green" "Installing Simple-Nvim..."
-install_simple_nvim
+if [ "$1" == "-U" ]; then
+    update_simple_nvim
+elif [ "$1" == "-I" ]; then
+    print_message "$green" "Welcome to the remote installer of Simple-Nvim"
+    print_message "$yellow" "Checking for dependencies..."
+    check_dependencies
+    print_message "$green" "Installing Simple-Nvim..."
+    install_simple_nvim
+else
+    echo "Usage: $0 -I to install or -U to update Simple-Nvim"
+    exit 1
+fi
+

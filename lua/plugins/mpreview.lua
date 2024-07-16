@@ -1,3 +1,7 @@
+
+-- hotkey to open the preview faster
+vim.keymap.set('n', '<leader>mp', ":MarkdownPreview<CR>")
+
 return {
   "iamcco/markdown-preview.nvim",
   cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },

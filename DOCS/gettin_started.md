@@ -1,4 +1,8 @@
-<h1>Shortcuts</h1>
+# Simple-Neovim Docs
+(Always remember that this neovim configuration follow the)
+
+
+## Shortcuts
 
 :information_source: To make this process easier you first should go into `~/nvim/lua/` and look for the file called `vim-options.lua` and open it and look for the next line of code 
 ```lua
