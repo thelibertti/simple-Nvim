@@ -21,7 +21,7 @@ require("lazy").setup({
     lazy = false,
   },
   change_detection = {
-		notify = false,
-	},
+    notify = false,
+  },
 
 })

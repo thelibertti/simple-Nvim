@@ -6,7 +6,7 @@ Español?
 
 
 
-<h1>What is this project?</h1>
+<h1>Simple Nvim</h1>
 
 ![](templates/simple-nvim-template.jpg)
 
@@ -50,10 +50,11 @@ https://github.com/klkgang/simple-Nvim/assets/139710771/3b3b6c13-a98c-4709-bf41-
 <h1>HOW TO INSTALL?</h1>
 
 
-### Step One
-Set everything up with this command
+### Instalation
+
+Simple set everything up with this command
 ```bash
-curl -sSL https://raw.githubusercontent.com/thelibertti/simple-Nvim/main/father.sh | bash
+curl -sSL https://raw.githubusercontent.com/thelibertti/simple-Nvim/main/father.sh | bash -s -- -I
 ```
 
-That's it! Now simply run nvim and start exploring the configuration.
+That's it! Now simply run nvim and start exploring the configuration!!

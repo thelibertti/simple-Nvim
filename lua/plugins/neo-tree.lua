@@ -1,6 +1,6 @@
 return {
 	"nvim-neo-tree/neo-tree.nvim",
-  keys = { -- only load the plugin on these keymaps
+  keys = {
       { "<leader>w", "<CMD>Neotree filesystem reveal left<CR>" },
       { "<leader>bf", "<CMD>Neotree buffers reveal float<CR>" },
   },

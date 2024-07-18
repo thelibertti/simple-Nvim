@@ -5,7 +5,7 @@
 # version 0.1
 REPOSITORY_URL="https://github.com/thelibertti/simple-Nvim"
 repository_name="simple-Nvim"
-path="$HOME/.config/nvim"
+path="$HOME/.config/"
 green="\033[0;32m"
 red="\033[0;31m"
 yellow="\033[0;33m"
@@ -51,8 +51,8 @@ check_dependencies() {
 install_simple_nvim() {
     if [ -d "$path" ]; then
         print_message "$green" "[INFO] Backing up your current nvim configuration..."
-        rm -rf "$path.bak"
-        if ! mv "$path" "$path.bak"; then
+        rm -rf "$HOME/.config/nvim.bak"
+        if ! mv "$HOME/.config/nvim" "$HOME/.config/nvim.bak"; then
             print_message "$red" "Failed to backup existing nvim configuration."
             exit 1
         fi
@@ -65,9 +65,8 @@ install_simple_nvim() {
         exit 1
     fi
     repository_name=$(basename "$REPOSITORY_URL" .git)
-    cd "$repository_name" || { print_message "$red" "Failed to navigate to $repository_name"; exit 1; }
-    if ! mv * ../; then
-        print_message "$red" "Failed to move nvim configuration files."
+    if ! mv "$repository_name" "nvim"; then
+        print_message "$red" "Failed to set up neovim"
         exit 1
     fi
     cd .. || exit

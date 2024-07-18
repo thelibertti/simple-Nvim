@@ -20,14 +20,14 @@ return {
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
       require("mason-lspconfig").setup()
 
-      require("mason-lspconfig").setup_handlers{
-        function (server_name)
-          require("lspconfig")[server_name].setup{
+      require("mason-lspconfig").setup_handlers {
+        function(server_name)
+          require("lspconfig")[server_name].setup {
             capabilities = capabilities
           }
         end,
-        --NOTE: if you need you can add other handlers than the 
-        --NOTE: default ones run 
+        --NOTE: if you need you can add other handlers than the
+        --NOTE: default ones run
         --NOTE: :h mason-lspconfig-automatic-server-setup
         --NOTE: for more information
 

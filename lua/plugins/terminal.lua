@@ -1,6 +1,6 @@
 --function
 function TerminalM()
-    vim.cmd(":ToggleTerm size=40 dir=~/Desktop direction=float name=desktop")
+  vim.cmd(":ToggleTerm size=40 dir=~/Desktop direction=float name=desktop")
 end
 
 --detect command
@@ -11,7 +11,8 @@ vim.keymap.set('n', "<Leader>t", ":Terminal<CR>")
 
 
 return {
-  {'akinsho/toggleterm.nvim',
+  {
+    'akinsho/toggleterm.nvim',
     version = "*",
     config = true,
     event = "VeryLazy"

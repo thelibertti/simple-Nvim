@@ -1,4 +1,3 @@
-
 -- hotkey to open the preview faster
 vim.keymap.set('n', '<leader>mp', ":MarkdownPreview<CR>")
 

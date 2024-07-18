@@ -55,9 +55,9 @@ return {
         },
 
         sources = {
-          { name = "buffer" },
-          { name = "nvim_lsp" },
-          { name = "luasnip" },
+          { name = "buffer",   max_item_count = 7 },
+          { name = "nvim_lsp", max_item_count = 7 },
+          { name = "luasnip",  max_item_count = 7 },
         },
 
         window = {
@@ -65,27 +65,29 @@ return {
           documentation = cmp.config.window.bordered(),
         },
 
-      mapping = cmp.mapping.preset.insert({
-      ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-      ['<C-f>'] = cmp.mapping.scroll_docs(4),
-      ['<C-Space>'] = cmp.mapping.complete(),
-      ['<C-e>'] = cmp.mapping.abort(),
-      ['<CR>'] = cmp.mapping.confirm({ select = true }),
-      }),
+        mapping = cmp.mapping.preset.insert({
+          ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+          ['<C-f>'] = cmp.mapping.scroll_docs(4),
+          ['<C-Space>'] = cmp.mapping.complete(),
+          ['<C-e>'] = cmp.mapping.abort(),
+          ['<CR>'] = cmp.mapping.confirm({ select = true }),
+        }),
 
-      formatting = {
-        format = function(entry, item)
+        formatting = {
+          fields = { 'abbr', 'kind', 'menu' },
+          expandable_indicator = true,
+          format = function(entry, item)
             item.kind = lsp_symbols[item.kind]
             item.menu = ({
-                buffer = "[Buffer]",
-                nvim_lsp = "[LSP]",
-                luasnip = "[Snippet]",
+              buffer = "[Buffer]",
+              nvim_lsp = "[LSP]",
+              luasnip = "[Snippet]",
             })[entry.source.name]
 
             return item
-        end,
-      },
-    })
+          end,
+        },
+      })
     end,
   },
 }
