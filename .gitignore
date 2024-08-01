@@ -1,5 +1,5 @@
 lazy-lock.json
-lua/plugins/lsp-config.lua
 custom_plugins/
 ideas/
 debug/
+lua/plugins/theme.lua
