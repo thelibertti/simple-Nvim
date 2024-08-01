@@ -11,6 +11,7 @@ vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
 vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
 
 vim.wo.number = true
+vim.g.zig_fmt_autosave = 0
 
 --general icons for the configuration
 vim.fn.sign_define("DiagnosticSignError",
